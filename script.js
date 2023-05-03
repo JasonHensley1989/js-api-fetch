@@ -42,9 +42,41 @@ const getBooks = () => {
     })
 }
 
+const getPosts = () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => res.json())
+    .then((data) => {
+        let output = '<h2>Posts</h2>';
+        data.forEach((post) => {
+            output += `
+            <h3>Title: ${post.title}</h3>
+            <p>${post.body}</p>
+            <p>Post ID: ${post.id} User ID:${post.userId}</p>
+            `
+        })
+        document.getElementById('output').innerHTML = output;
+    })
+}
+
+const getComments = () => {
+    
+}
+
+const getTodos = () => {
+    
+}
+
+const getUsersApi = () => {
+    
+}
 
 document.getElementById('getText').addEventListener("click", getText);
 document.getElementById('getUsers').addEventListener("click", getUsers);
 document.getElementById('getBooks').addEventListener("click", getBooks);
+document.getElementById('getPosts').addEventListener("click", getPosts);
+document.getElementById('getComments').addEventListener("click", getComments);
+document.getElementById('getTodos').addEventListener("click", getTodos);
+document.getElementById('getUsersApi').addEventListener("click", getUsersApi);
+
 
 
