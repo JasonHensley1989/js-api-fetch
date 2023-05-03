@@ -49,34 +49,36 @@ const getPosts = () => {
         let output = '<h2>Posts</h2>';
         data.forEach((post) => {
             output += `
-            <h3>Title: ${post.title}</h3>
-            <p>${post.body}</p>
-            <p>Post ID: ${post.id} User ID:${post.userId}</p>
+            <div>
+                <h3>Title: ${post.title}</h3>
+                <p>${post.body}</p>
+                <p>Post ID: ${post.id} User ID:${post.userId}</p>
+            </div>
             `
         })
         document.getElementById('output').innerHTML = output;
     })
 }
 
-const getComments = () => {
+// const getComments = () => {
     
-}
+// }
 
-const getTodos = () => {
+// const getTodos = () => {
     
-}
+// }
 
-const getUsersApi = () => {
+// const getUsersApi = () => {
     
-}
+// }
 
 document.getElementById('getText').addEventListener("click", getText);
 document.getElementById('getUsers').addEventListener("click", getUsers);
 document.getElementById('getBooks').addEventListener("click", getBooks);
 document.getElementById('getPosts').addEventListener("click", getPosts);
-document.getElementById('getComments').addEventListener("click", getComments);
-document.getElementById('getTodos').addEventListener("click", getTodos);
-document.getElementById('getUsersApi').addEventListener("click", getUsersApi);
+// document.getElementById('getComments').addEventListener("click", getComments);
+// document.getElementById('getTodos').addEventListener("click", getTodos);
+// document.getElementById('getUsersApi').addEventListener("click", getUsersApi);
 
 
 
