@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "book": "Alice In Wonderland",
+        "author": "Lewis Carrol",
+        "releaseYear": 1865
+    },
+    {
+        "id": 2,
+        "book": "20,000 Leaugues Under The Sea",
+        "author": "Jules Verne",
+        "releaseYear": 1870
+    },
+    {
+        "id": 3,
+        "book": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "releaseYear": 1937
+    },
+    {
+        "id": 1,
+        "book": "Dante's Inferno",
+        "author": "Dante Alighieri",
+        "releaseYear": 1314
+    }
+]
