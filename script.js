@@ -60,6 +60,24 @@ const getPosts = () => {
     })
 }
 
+const addPost = (e) => {
+    e.preventDefault();
+    let title = document.getElementById('title').value;
+    let body = document.getElementById('body').value;
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json, text/plain */*',
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({title:title, body: body})
+    })
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+    
+}
+
 // const getComments = () => {
     
 // }
@@ -76,6 +94,8 @@ document.getElementById('getText').addEventListener("click", getText);
 document.getElementById('getUsers').addEventListener("click", getUsers);
 document.getElementById('getBooks').addEventListener("click", getBooks);
 document.getElementById('getPosts').addEventListener("click", getPosts);
+document.getElementById('addPost').addEventListener("submit", addPost);
+
 // document.getElementById('getComments').addEventListener("click", getComments);
 // document.getElementById('getTodos').addEventListener("click", getTodos);
 // document.getElementById('getUsersApi').addEventListener("click", getUsersApi);
