@@ -24,8 +24,27 @@ const getUsers = () => {
     })
 }
 
+const getBooks = () => {
+    fetch('books.json')
+    .then((res) => res.json())
+    .then((data) => {
+        let output = '<h2>Top Book List</h2>';
+        data.forEach((book) => {
+            output += `
+            <ul>
+                <li>Book Title: ${book.book}</li>
+                <li>Book Author: ${book.author}</li>
+                <li>Release Date: ${book.releaseYear}</li>
+            </ul>
+            `
+        })
+        document.getElementById('output').innerHTML = output;
+    })
+}
+
+
 document.getElementById('getText').addEventListener("click", getText);
 document.getElementById('getUsers').addEventListener("click", getUsers);
-
+document.getElementById('getBooks').addEventListener("click", getBooks);
 
 
