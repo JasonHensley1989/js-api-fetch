@@ -1,3 +1,5 @@
+import { exportedVar } from "./moduleScript.js";
+
 // Scope Testing 
 
 // Global, Module, Block, and Local
@@ -14,3 +16,5 @@ console.log("B is not defined here becuase of local scope", a);
 
 // Global Variable 
 console.log(globalVar);
+console.log(exportedVar);
+console.log(moduleVar);
