@@ -50,7 +50,7 @@ const test3 = () => {
 test3();
 
 // this test shows why non repetitive variable names are necessary
-
+// due to block scope
 const test4 = () => {
     const a = 9;
     if(true) {
@@ -61,3 +61,4 @@ const test4 = () => {
 }
 
 test4();
+
