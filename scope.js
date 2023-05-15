@@ -27,7 +27,21 @@ const test2 = () => {
         const c = 3;
         console.log(b, c);
     }
-    console.log(c);
+    console.log();
 }
 
 test2();
+
+// function scope and block using var
+const test3 = () => {
+    var d = 2;
+
+    if(true) {
+        var e = 3;   
+    }
+    // e can be logged here because of the scope that var uses
+    // this is what const and let rectify
+  console.log(e);
+}
+
+test3();
