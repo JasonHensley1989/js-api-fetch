@@ -10,6 +10,7 @@ const test = () => {
 }
 
 test();
-console.log("B is not defined here becuase of local scope", a, b);
+console.log("B is not defined here becuase of local scope", a);
 
-// 
+// Global Variable 
+console.log(globalVar);
