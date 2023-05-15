@@ -11,3 +11,5 @@ const test = () => {
 
 test();
 console.log("B is not defined here becuase of local scope", a, b);
+
+// 
